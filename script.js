@@ -73,6 +73,8 @@ var getFinanceData = {
     $("#errorMessage").show().text(`Something went wrong. Please check the stock code again. You entered: ${code}`);
   },
   postResults: function(data) {
+    $("#stockForm").css("display", "inline-block");
+
     let open = [];
     let high = [];
     let low = [];

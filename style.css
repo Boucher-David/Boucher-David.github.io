@@ -27,14 +27,16 @@ header p {
 
 #stockForm {
   width: 400px;
-  margin: 0;
-  display: inline-block;
+  margin: auto;
   vertical-align: top;
   height: 900px;
   align-items: center;
   background: #f4f7f8;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+ ul {
+   list-style: none;
+ }
 
 #enterStock {
   width: 385px;
