@@ -1,0 +1,218 @@
+*{margin: 0; padding: 0; border: 0; outline: 0;}
+
+body {
+  overflow: hidden;
+}
+header {
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+  display: inline-block;
+}
+header div {
+  width: 800px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 75px;
+}
+header h1 {
+  font-size: 6em;
+  color: white;
+  margin-top: 25px;
+}
+header p {
+  color: white;
+}
+
+#stockForm {
+  width: 400px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  height: 900px;
+  align-items: center;
+  background: #f4f7f8;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#enterStock {
+  width: 385px;
+}
+#enterStock label {
+  width: 385px;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 100px;
+  font-size: 1.4em;
+  color: #717171;
+}
+#enterStock input {
+  width: 350px;
+  height: 25px;
+  margin-left: 25px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #e8eeef;
+  text-align: center;
+}
+
+#previousStocks label {
+  width: 385px;
+  margin-top: 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 85px;
+  font-size: 1.4em;
+  color: #717171;
+}
+#previousStocks select {
+  width: 350px;
+  height: 25px;
+  margin-left: 25px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #e8eeef;
+  text-align-last:center;
+}
+
+#timeInterval label {
+  width: 385px;
+  color: #717171;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 85px;
+  font-size: 1.4em;
+}
+#timeInterval select {
+  width: 350px;
+  height: 25px;
+  margin-left: 25px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #e8eeef;
+  text-align-last:center;
+}
+
+#submit {
+  width: 304px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  background: #1abc9c;
+  height: 35px;
+  color: #FFF;
+  font-size: 18px;
+  margin-top: 25px;
+  text-align: center;
+  font-style: normal;
+}
+
+button {
+  background: #1abc9c;
+  width: 304px;
+  height: 35px;
+  margin-left: 50px;
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+}
+#errorMessage {
+  color: #717171;
+  text-align: center;
+  margin-top: 10px;
+}
+#guide{
+  color: #717171;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.chart {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.previousStocks {
+  display: none;
+}
+.stockInformation {
+  display: none;
+}
+
+.terminology {
+  display: none;
+}
+
+.ct-legend {
+    position: relative;
+    z-index: 10;
+    list-style: none;
+    text-align: center;
+}
+
+.ct-legend li {
+    position: relative;
+    padding-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 16px;
+}
+
+.ct-legend li:before {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    content: '';
+    border: 3px solid transparent;
+    border-radius: 2px;
+}
+
+.ct-legend li.inactive:before {
+    background: transparent;
+}
+
+.ct-legend li.ct-legend-inside {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ct-legend li.ct-series-0:before {
+    background-color: red;
+    border-color: red;
+}
+
+.ct-legend li.ct-series-1:before {
+    background-color: blue;
+    border-color: blue;
+}
+.ct-legend li.ct-series-2:before {
+    background-color: green;
+    border-color: green;
+}
+.ct-legend li.ct-series-3:before {
+    background-color: black;
+    border-color: black;
+}
+.ct-line {
+  stroke-width: 1px;
+}
+.ct-series-a .ct-line {
+  stroke: red;
+}
+.ct-series-b .ct-line {
+  stroke: blue;
+}
+.ct-series-c .ct-line {
+  stroke: green;
+}
+.ct-series-b .ct-line {
+  stroke: black;
+}

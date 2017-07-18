@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.1/chartist-plugin-legend.min.js"></script>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <img src="http://citywireukinsights.co.uk/wp-content/uploads/2017/02/Graphjan-400x200.jpg">
+      <div><h1>Stock Search</h1>
+      <p>Search the Stock Market and Display Results</p></div>
+    </header>
+
+    <form id="stockForm">
+      <ul>
+
+        <li id="enterStock">
+          <label>Enter Stock Below</label>
+          <input id="enterStockInput" type="text" name="field3" class="field-long" />
+        </li>
+
+        <div class="previousStocks">
+          <li id="previousStocks"><label>Stock Search History</label> <BR>
+          <SELECT name="previousStocks" id="previousStocksId">
+            <option value="None" selected="selected">None</option>
+          </SELECT>
+        </li>
+      </div>
+
+        <li id="timeInterval">
+          <label>Select Time Interval</label>
+          <select id="timeIntervalSelect">
+            <option value="1min" selected="selected">1min</option>
+            <option value="5min">5min</option>
+            <option value="15min">15min</option>
+            <option value="30min">30min</option>
+            <option value="60min">60min</option>
+        </select>
+        <br />
+
+          <input type="submit" value="Submit" id="submit"/>
+        </li>
+
+        <li id="buttons">
+          <button id="clearHistory">Clear History</button></div>
+        </li>
+
+      </li>
+
+      <li id="guide">
+        <p>Consult <a href="http://eoddata.com/symbols.aspx">EodData</a> for stock codes.</p>
+        <p>Time Interval: Time between data points</p>
+        <p>Search history choice takes priority, unless you select "None"</p>
+      </li>
+
+      <li id="errorMessage"></li>
+
+
+      </ul>
+    </form>
+
+    <div class="chart">
+      <div id="chart"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
+</html>
