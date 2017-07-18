@@ -1,0 +1,8 @@
+*.pyc
+/.idea
+/__pycache__
+*.DS_Store
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
