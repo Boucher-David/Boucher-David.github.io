@@ -34,6 +34,7 @@ function searchStorage() {
 
   this.appendValues = () => {
     if (this.searchStorageLocal.length > 0) {
+      $("#previousStocksId").find("option").not(":first").remove();
       $.each(this.searchStorageLocal, (index, value) => {
           let o = new Option(value.newCode, value.newCode);
           $("#previousStocksId").append(o);
