@@ -13,7 +13,7 @@ class getLineItemID:
 
     def main(self):
         LINE_ITEM_ID = []  # Don't touch this.
-        line_item_service = self.client.GetService('LineItemService', version='v201711')
+        line_item_service = self.client.GetService('LineItemService', version='v201802')
         values = {
             'key': 'orderId',
             'value': {

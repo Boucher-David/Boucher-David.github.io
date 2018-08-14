@@ -9,7 +9,7 @@ class getValueID:
 
     def main(self):
         valueIDs = {}
-        custom_targeting_service = self.client.GetService('CustomTargetingService', version='v201711')
+        custom_targeting_service = self.client.GetService('CustomTargetingService', version='v201802')
 
         query = ('WHERE customTargetingKeyId IN (%s)' % (self.key_id))
 

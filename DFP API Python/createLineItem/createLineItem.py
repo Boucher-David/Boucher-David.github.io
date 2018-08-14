@@ -20,7 +20,7 @@ class createLineItem:
 
     def main(self, targetingValues):
         d = datetime.today() + timedelta(days=1)
-        line_item_service = self.client.GetService('LineItemService', version='v201711')
+        line_item_service = self.client.GetService('LineItemService', version='v201802')
         line_items = []
         microAmountIncrement = int(1000000 * self.increment)
         microAmountStarting = int(1000000 * self.startingAmount)
