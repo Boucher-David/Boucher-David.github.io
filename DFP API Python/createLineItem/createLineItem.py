@@ -17,13 +17,10 @@ class createLineItem:
                 'adUnitId': '%s' % (adunit),
                 'includeDescendants': True
             })
-        print (self.adunit_id)
-
-
 
     def main(self, targetingValues):
         d = datetime.today() + timedelta(days=1)
-        line_item_service = self.client.GetService('LineItemService', version='v201611')
+        line_item_service = self.client.GetService('LineItemService', version='v201711')
         line_items = []
         microAmountIncrement = int(1000000 * self.increment)
         microAmountStarting = int(1000000 * self.startingAmount)
@@ -92,8 +89,8 @@ class createLineItem:
                     },
                     {
                         'size': {
-                            'width': '728',
-                            'height': '90',
+                            'width': '200',
+                            'height': '200',
                             'isAspectRatio': False
                         }
                     },
@@ -101,6 +98,76 @@ class createLineItem:
                         'size': {
                             'width': '300',
                             'height': '250',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '300',
+                            'height': '6000',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '320',
+                            'height': '50',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '320',
+                            'height': '100',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '336',
+                            'height': '280',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '468',
+                            'height': '60',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '468',
+                            'height': '250',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '620',
+                            'height': '250',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '728',
+                            'height': '90',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '770',
+                            'height': '250',
+                            'isAspectRatio': False
+                        }
+                    },
+                    {
+                        'size': {
+                            'width': '970',
+                            'height': '90',
                             'isAspectRatio': False
                         }
                     }

@@ -81,16 +81,17 @@ def main():
     path = os.path.dirname(__file__)
     credential_path = "%s/Credentials/googleads.yaml" % (os.path.abspath(path))
 
-
     getValues = getTargetingValues.getValueID(key_id=key_id, path=credential_path).main()
+
     createLineItems = createLineItem.createLineItem(key_id=key_id, path=credential_path, order_id=order_id, adunit_id=adunit_id,increment=increment,startingAmount=startingAmount,numberOfLines=numberOfLines).main(targetingValues=getValues)
     print("Now getting all line Item IDs and assigning your prebid creatives to them")
     getLineItem = getLineItems.getLineItemID(path=credential_path, order_id=order_id).main()
+
     for line_item in getLineItem:
         for creativeID in creative_id:
             try:
                 creatives = creative.creative(path=credential_path, creative_ids=creativeID, line_item_id=line_item, order_id=order_id).main()
-            except Exception:
-                print("Creative already in line item, trying next one.")
+            except Exception as e:
+                print ('exception: ', str(e))
                 pass
 main()

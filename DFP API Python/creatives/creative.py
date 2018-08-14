@@ -10,7 +10,7 @@ class creative:
 
     def main(self):
         client = dfp.DfpClient.LoadFromStorage(self.path)
-        lica_service = client.GetService('LineItemCreativeAssociationService', version='v201611')
+        lica_service = client.GetService('LineItemCreativeAssociationService', version='v201711')
         licas = []
         licas.append({
             'creativeId': self.creative_ids,

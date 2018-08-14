@@ -9,10 +9,12 @@ class getValueID:
 
     def main(self):
         valueIDs = {}
-        custom_targeting_service = self.client.GetService('CustomTargetingService', version='v201611')
+        custom_targeting_service = self.client.GetService('CustomTargetingService', version='v201711')
 
         query = ('WHERE customTargetingKeyId IN (%s)' % (self.key_id))
+
         statement = self.dfp.FilterStatement(query)
+
 
         while True:
             response = custom_targeting_service.getCustomTargetingValuesByStatement(
@@ -24,5 +26,4 @@ class getValueID:
                 statement.offset += dfp.SUGGESTED_PAGE_LIMIT
             else:
                 break
-
         return valueIDs

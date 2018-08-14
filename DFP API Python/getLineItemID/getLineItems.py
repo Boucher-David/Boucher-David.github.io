@@ -13,7 +13,7 @@ class getLineItemID:
 
     def main(self):
         LINE_ITEM_ID = []  # Don't touch this.
-        line_item_service = self.client.GetService('LineItemService', version='v201605')
+        line_item_service = self.client.GetService('LineItemService', version='v201711')
         values = {
             'key': 'orderId',
             'value': {
@@ -31,9 +31,11 @@ class getLineItemID:
             if 'results' in response:
                 # Display results.
                 for line_item in response['results']:
-                    lineItemID = int(line_item['id'])
-                    LINE_ITEM_ID.append(lineItemID)
-
+                    if (line_item.isArchived == False):
+                        lineItemID = int(line_item['id'])
+                        LINE_ITEM_ID.append(lineItemID)
+                    else:
+                        print(line_item.isArchived)
                 statement.offset += googleads.dfp.SUGGESTED_PAGE_LIMIT
             else:
                 break
